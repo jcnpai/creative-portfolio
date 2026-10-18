@@ -1,0 +1,1187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Experience | John Chris Broqueza</title>
+  <meta name="description" content="Professional experience of John Chris Broqueza as a Video Editor, Graphic Designer, Web Designer, and Social Media Manager.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #101010;
+      --surface: #191919;
+      --white: #f5f3ee;
+      --muted: #999999;
+      --accent: #b5a48a;
+      --border: rgba(255,255,255,0.12);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: "DM Sans", sans-serif;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 6%;
+    }
+
+    .italic {
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-weight: 500;
+      color: var(--accent);
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    /* NAVIGATION */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(16,16,16,0.94);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -2px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      color: var(--muted);
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--white);
+    }
+
+    .nav-links a.active {
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 10px;
+    }
+
+    .nav-cta {
+      padding: 13px 20px;
+      border: 1px solid var(--border);
+      font-size: 12px;
+      letter-spacing: 1px;
+      transition: 0.3s;
+    }
+
+    .nav-cta:hover {
+      background: var(--white);
+      color: var(--bg);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 0;
+      color: var(--white);
+      font-size: 28px;
+    }
+
+    /* HERO */
+
+    .page-hero {
+      padding: 185px 0 105px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::after {
+      content: "CAREER";
+      position: absolute;
+      right: -2%;
+      bottom: -10%;
+      font-size: clamp(120px,22vw,340px);
+      font-weight: 700;
+      letter-spacing: -0.09em;
+      color: rgba(255,255,255,0.018);
+      pointer-events: none;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(65px,11vw,160px);
+      font-weight: 600;
+      letter-spacing: -0.085em;
+      line-height: 1.04;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 40px;
+      margin-top: 50px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-bottom p {
+      max-width: 640px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.85;
+    }
+
+    .hero-label {
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 2px;
+      white-space: nowrap;
+    }
+
+    /* INTRODUCTION */
+
+    .intro-section {
+      padding: 105px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 75px;
+      align-items: start;
+    }
+
+    .intro-heading {
+      font-size: clamp(38px,4.8vw,65px);
+      line-height: 1.17;
+      font-weight: 500;
+      letter-spacing: -0.055em;
+    }
+
+    .intro-copy {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 2;
+    }
+
+    .intro-copy p + p {
+      margin-top: 20px;
+    }
+
+    /* EXPERIENCE SECTION */
+
+    .experience-section {
+      padding: 115px 0 125px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
+      margin-bottom: 75px;
+    }
+
+    .section-title {
+      font-size: clamp(42px,6vw,78px);
+      font-weight: 500;
+      letter-spacing: -0.06em;
+      line-height: 1.1;
+    }
+
+    .section-description {
+      max-width: 330px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    /* TIMELINE */
+
+    .timeline {
+      position: relative;
+      padding-left: 45px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 12px;
+      bottom: 65px;
+      width: 1px;
+      background: var(--border);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: 65px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: -43px;
+      width: 12px;
+      height: 12px;
+      border: 2px solid var(--accent);
+      border-radius: 50%;
+      background: var(--bg);
+      z-index: 2;
+    }
+
+    .timeline-item:first-child::before {
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(181,164,138,0.10);
+    }
+
+    .experience-card {
+      padding: 45px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .experience-card:hover {
+      border-color: rgba(181,164,138,0.5);
+      transform: translateY(-4px);
+    }
+
+    .experience-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 25px;
+      margin-bottom: 22px;
+    }
+
+    .experience-date {
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .experience-number {
+      color: rgba(255,255,255,0.17);
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    .experience-role {
+      font-size: clamp(25px,3vw,40px);
+      font-weight: 500;
+      letter-spacing: -0.045em;
+      line-height: 1.35;
+      margin-bottom: 16px;
+    }
+
+    .experience-company {
+      color: var(--accent);
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+
+    .experience-description {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.95;
+      max-width: 900px;
+    }
+
+    .experience-highlights {
+      margin-top: 27px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .experience-tag {
+      border: 1px solid var(--border);
+      padding: 9px 13px;
+      color: #c5c5c5;
+      font-size: 11px;
+    }
+
+    /* EXPERTISE */
+
+    .expertise-section {
+      padding: 120px 0;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap: 18px;
+      margin-top: 55px;
+    }
+
+    .expertise-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 38px;
+      min-height: 240px;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .expertise-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .expertise-number {
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    .expertise-card h3 {
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 24px;
+      font-weight: 500;
+      letter-spacing: -0.035em;
+    }
+
+    .expertise-card p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* TOOLS */
+
+    .tools-section {
+      padding: 115px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .tools-description {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+      margin-top: 20px;
+      max-width: 650px;
+    }
+
+    .tools-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 45px;
+    }
+
+    .tool {
+      padding: 15px 22px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: #d2d2d2;
+      font-size: 13px;
+      transition: border-color 0.3s, color 0.3s;
+    }
+
+    .tool:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* PORTFOLIO CTA */
+
+    .work-cta {
+      padding: 115px 0;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      background: #151515;
+    }
+
+    .work-cta h2 {
+      font-size: clamp(43px,6vw,85px);
+      font-weight: 500;
+      letter-spacing: -0.06em;
+      line-height: 1.15;
+    }
+
+    .work-cta p {
+      max-width: 600px;
+      margin: 25px auto 35px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 19px 29px;
+      min-width: 190px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .cta-button.primary {
+      background: var(--white);
+      color: #111;
+    }
+
+    .cta-button.primary:hover {
+      background: var(--accent);
+    }
+
+    .cta-button.secondary {
+      border: 1px solid var(--accent);
+    }
+
+    .cta-button.secondary:hover {
+      background: var(--accent);
+      color: #111;
+    }
+
+    /* CONTACT */
+
+    .contact-section {
+      padding: 125px 0;
+      background: var(--surface);
+    }
+
+    .contact-title {
+      display: inline-block;
+      font-size: clamp(50px,8vw,110px);
+      font-weight: 500;
+      letter-spacing: -0.065em;
+      line-height: 1.1;
+      transition: color 0.3s;
+    }
+
+    .contact-title:hover {
+      color: var(--accent);
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* ANIMATIONS */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 86px;
+        left: 0;
+        width: 100%;
+        padding: 35px 6%;
+        background: #151515;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .page-hero {
+        padding: 155px 0 75px;
+      }
+
+      .hero-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-bottom p {
+        font-size: 15px;
+      }
+
+      .intro-section,
+      .experience-section,
+      .expertise-section,
+      .tools-section,
+      .work-cta,
+      .contact-section {
+        padding: 80px 0;
+      }
+
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 50px;
+      }
+
+      .timeline {
+        padding-left: 28px;
+      }
+
+      .timeline::before {
+        left: 6px;
+      }
+
+      .timeline-item::before {
+        left: -27px;
+        width: 11px;
+        height: 11px;
+      }
+
+      .timeline-item {
+        padding-bottom: 30px;
+      }
+
+      .experience-card {
+        padding: 27px;
+      }
+
+      .expertise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .expertise-card {
+        min-height: auto;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .experience-card {
+        padding: 22px;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+      }
+
+      .cta-button {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+  <nav class="navbar container" aria-label="Main navigation">
+    <a href="index.html" class="logo">JCNPAI<span>.</span></a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="works.html">My Works</a>
+      <a href="experience.html" class="active" aria-current="page">Experience</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <a href="contact.html" class="nav-cta">LET'S TALK ↗</a>
+
+    <button
+      type="button"
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="navLinks"
+    >☰</button>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow reveal">MY PROFESSIONAL JOURNEY</p>
+
+    <h1 class="reveal">
+      My <span class="italic">Experience.</span>
+    </h1>
+
+    <div class="hero-bottom reveal">
+      <p>
+        From video editing and graphic design to web design
+        and social media management, my experience is built
+        around creating engaging digital content and helping
+        businesses communicate their stories.
+      </p>
+
+      <a href="#career" class="hero-label">
+        EXPLORE MY JOURNEY ↓
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- INTRODUCTION -->
+
+<section class="intro-section">
+  <div class="container intro-grid">
+
+    <div class="reveal">
+      <p class="eyebrow">BEYOND THE RESUME</p>
+
+      <h2 class="intro-heading">
+        Creativity backed by
+        <span class="italic">experience.</span>
+      </h2>
+    </div>
+
+    <div class="intro-copy reveal">
+      <p>
+        Since 2019, I've collaborated with businesses across
+        the United States, Australia, the United Kingdom,
+        and Canada, delivering professional video editing,
+        graphic design, web design, and social media
+        management services.
+      </p>
+
+      <p>
+        I specialize in transforming ideas into compelling
+        visual content, from short-form videos and branded
+        graphics to responsive websites and strategic social
+        media campaigns.
+      </p>
+
+      <p>
+        My earlier experience in sales, marketing, and
+        technical support gives me a practical understanding
+        of customer needs, business goals, and effective
+        communication.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CAREER TIMELINE -->
+
+<section class="experience-section" id="career">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <div>
+        <p class="eyebrow">CAREER TIMELINE</p>
+
+        <h2 class="section-title">
+          Where I've <span class="italic">worked.</span>
+        </h2>
+      </div>
+
+      <p class="section-description">
+        A professional journey combining creative
+        production, digital marketing, and
+        customer-focused experience.
+      </p>
+    </div>
+
+    <div class="timeline">
+
+      <!-- EXPERIENCE 01 -->
+
+      <article class="timeline-item reveal">
+        <div class="experience-card">
+
+          <div class="experience-top">
+            <span class="experience-date">2019 — PRESENT</span>
+            <span class="experience-number">01 / 03</span>
+          </div>
+
+          <h3 class="experience-role">
+            Video Editor | Graphic Designer |
+            Web Designer | Social Media Manager
+          </h3>
+
+          <p class="experience-company">
+            Various Businesses · USA, AU, UK, CA
+          </p>
+
+          <p class="experience-description">
+            Providing creative production and digital
+            marketing services to businesses across
+            international markets. I edit engaging
+            short-form and long-form videos, create
+            branded graphics and promotional materials,
+            design responsive websites and landing pages,
+            and manage social media content.
+            My work combines visual storytelling,
+            brand consistency, content planning,
+            and strategic communication to help
+            businesses connect with their audiences
+            and strengthen their online presence.
+          </p>
+
+          <div class="experience-highlights">
+            <span class="experience-tag">Video Editing</span>
+            <span class="experience-tag">Graphic Design</span>
+            <span class="experience-tag">Web Design</span>
+            <span class="experience-tag">Social Media Management</span>
+            <span class="experience-tag">Motion Graphics</span>
+            <span class="experience-tag">Content Strategy</span>
+            <span class="experience-tag">Copywriting</span>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- EXPERIENCE 02 -->
+
+      <article class="timeline-item reveal">
+        <div class="experience-card">
+
+          <div class="experience-top">
+            <span class="experience-date">2018 — 2019</span>
+            <span class="experience-number">02 / 03</span>
+          </div>
+
+          <h3 class="experience-role">
+            Sales &amp; Marketing Coordinator
+          </h3>
+
+          <p class="experience-company">
+            COH Enterprises · Philippines
+          </p>
+
+          <p class="experience-description">
+            Coordinated sales and marketing initiatives,
+            developed promotional materials, supported
+            advertising campaigns, and collaborated
+            with internal teams and business partners.
+            Contributed to brand visibility, customer
+            engagement, and loyalty-focused promotions
+            through a combination of creative design,
+            marketing communication, and campaign planning.
+          </p>
+
+          <div class="experience-highlights">
+            <span class="experience-tag">Sales &amp; Marketing</span>
+            <span class="experience-tag">Promotional Campaigns</span>
+            <span class="experience-tag">Graphic Design</span>
+            <span class="experience-tag">Brand Marketing</span>
+            <span class="experience-tag">Partner Coordination</span>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- EXPERIENCE 03 -->
+
+      <article class="timeline-item reveal">
+        <div class="experience-card">
+
+          <div class="experience-top">
+            <span class="experience-date">2017 — 2018</span>
+            <span class="experience-number">03 / 03</span>
+          </div>
+
+          <h3 class="experience-role">
+            Technical &amp; Sales Support
+          </h3>
+
+          <p class="experience-company">
+            Sutherland Philippines
+          </p>
+
+          <p class="experience-description">
+            Provided technical assistance and sales
+            support by helping customers resolve
+            product concerns, troubleshoot issues,
+            and understand available services.
+            Strengthened my communication,
+            problem-solving, and customer service
+            skills while working in a fast-paced,
+            performance-driven environment.
+          </p>
+
+          <div class="experience-highlights">
+            <span class="experience-tag">Technical Support</span>
+            <span class="experience-tag">Sales Support</span>
+            <span class="experience-tag">Customer Service</span>
+            <span class="experience-tag">Problem Solving</span>
+            <span class="experience-tag">Communication</span>
+          </div>
+
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CORE EXPERTISE -->
+
+<section class="expertise-section">
+  <div class="container">
+
+    <div class="reveal">
+      <p class="eyebrow">WHAT I BRING TO THE TABLE</p>
+
+      <h2 class="section-title">
+        My core <span class="italic">expertise.</span>
+      </h2>
+    </div>
+
+    <div class="expertise-grid">
+
+      <!-- VIDEO EDITING -->
+
+      <article class="expertise-card reveal">
+        <span class="expertise-number">01 /</span>
+
+        <h3>Video Editing</h3>
+
+        <p>
+          Professional short-form and long-form video
+          editing, social media Reels, YouTube content,
+          promotional videos, motion graphics,
+          storytelling, and post-production.
+        </p>
+      </article>
+
+      <!-- GRAPHIC DESIGN -->
+
+      <article class="expertise-card reveal">
+        <span class="expertise-number">02 /</span>
+
+        <h3>Graphic Design</h3>
+
+        <p>
+          Creative graphics for branding, advertising,
+          marketing campaigns, social media,
+          promotional materials, and digital
+          visual communication.
+        </p>
+      </article>
+
+      <!-- WEB DESIGN -->
+
+      <article class="expertise-card reveal">
+        <span class="expertise-number">03 /</span>
+
+        <h3>Web Design</h3>
+
+        <p>
+          Responsive websites, landing pages,
+          interactive interfaces, mobile-friendly
+          layouts, and visually engaging
+          digital experiences.
+        </p>
+      </article>
+
+      <!-- SOCIAL MEDIA MANAGEMENT -->
+
+      <article class="expertise-card reveal">
+        <span class="expertise-number">04 /</span>
+
+        <h3>Social Media Management</h3>
+
+        <p>
+          Content planning, social media strategy,
+          copywriting, campaign development,
+          brand consistency, and engaging content
+          for multiple digital platforms.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- SOFTWARE AND TOOLS -->
+
+<section class="tools-section">
+  <div class="container">
+
+    <div class="reveal">
+      <p class="eyebrow">MY CREATIVE TOOLKIT</p>
+
+      <h2 class="section-title">
+        Tools of the <span class="italic">trade.</span>
+      </h2>
+
+      <p class="tools-description">
+        A combination of professional editing software,
+        design applications, and web technologies
+        allows me to deliver creative work across
+        different formats and platforms.
+      </p>
+    </div>
+
+    <div class="tools-grid reveal">
+      <span class="tool">Adobe Premiere Pro</span>
+      <span class="tool">Adobe After Effects</span>
+      <span class="tool">DaVinci Resolve</span>
+      <span class="tool">CapCut</span>
+      <span class="tool">Adobe Photoshop</span>
+      <span class="tool">Adobe Illustrator</span>
+      <span class="tool">Adobe InDesign</span>
+      <span class="tool">Canva</span>
+      <span class="tool">HTML</span>
+      <span class="tool">CSS</span>
+      <span class="tool">JavaScript</span>
+      <span class="tool">AI Creative Tools</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- PORTFOLIO CTA -->
+
+<section class="work-cta">
+  <div class="container reveal">
+
+    <p class="eyebrow">EXPERIENCE MEETS CREATIVITY</p>
+
+    <h2>
+      See the work
+      <span class="italic">behind the experience.</span>
+    </h2>
+
+    <p>
+      Explore my portfolio of video editing,
+      graphic design, website design,
+      and social media projects.
+    </p>
+
+    <div class="cta-buttons">
+      <a href="works.html" class="cta-button primary">
+        Explore My Works ↗
+      </a>
+
+      <a href="contact.html" class="cta-button secondary">
+        Let's Work Together ↗
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact-section">
+  <div class="container reveal">
+
+    <p class="eyebrow">READY TO COLLABORATE?</p>
+
+    <a href="contact.html" class="contact-title">
+      Let's build<br>
+      something great. ↗
+    </a>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="container footer-inner">
+    <span>
+      © <span id="year"></span> John Chris Broqueza
+    </span>
+
+    <span>
+      Designed with purpose. Built with creativity.
+    </span>
+  </div>
+</footer>
+
+<script>
+  /* MOBILE NAVIGATION */
+
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  menuToggle.addEventListener("click", () => {
+    const open = navLinks.classList.toggle("open");
+
+    menuToggle.textContent = open ? "✕" : "☰";
+    menuToggle.setAttribute("aria-expanded", String(open));
+    menuToggle.setAttribute(
+      "aria-label",
+      open ? "Close navigation menu" : "Open navigation menu"
+    );
+  });
+
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menuToggle.textContent = "☰";
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  /* SCROLL REVEAL */
+
+  const revealElements = document.querySelectorAll(".reveal");
+
+  if (
+    "IntersectionObserver" in window &&
+    !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  ) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    revealElements.forEach(element => {
+      observer.observe(element);
+    });
+  } else {
+    revealElements.forEach(element => {
+      element.classList.add("visible");
+    });
+  }
+
+  /* CURRENT YEAR */
+
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1071 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact | John Chris Broqueza</title>
+
+  <meta name="description" content="Connect with John Chris Broqueza for video editing, graphic design, web design, and social media management.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #101010;
+      --surface: #191919;
+      --white: #f5f3ee;
+      --muted: #999999;
+      --accent: #b5a48a;
+      --border: rgba(255,255,255,0.12);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: "DM Sans", sans-serif;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: auto;
+      padding: 0 6%;
+    }
+
+    .italic {
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-weight: 500;
+      color: var(--accent);
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    /* NAVIGATION */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(16,16,16,0.94);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -2px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      color: var(--muted);
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--white);
+    }
+
+    .nav-links a.active {
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 10px;
+    }
+
+    .nav-cta {
+      padding: 13px 20px;
+      border: 1px solid var(--border);
+      font-size: 12px;
+      letter-spacing: 1px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .nav-cta:hover {
+      background: var(--white);
+      color: var(--bg);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 28px;
+    }
+
+    /* HERO */
+
+    .page-hero {
+      padding: 185px 0 105px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::after {
+      content: "HELLO";
+      position: absolute;
+      right: -2%;
+      bottom: -18%;
+      font-size: clamp(140px,26vw,390px);
+      font-weight: 700;
+      letter-spacing: -0.09em;
+      color: rgba(255,255,255,0.018);
+      pointer-events: none;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(68px,12vw,165px);
+      font-weight: 600;
+      letter-spacing: -0.085em;
+      line-height: 1.04;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 40px;
+      margin-top: 50px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-bottom p {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.85;
+    }
+
+    .hero-label {
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 2px;
+      white-space: nowrap;
+    }
+
+    /* CONTACT PLATFORMS */
+
+    .contact-platforms {
+      padding: 110px 0 125px;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 86px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .contact-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 265px;
+      padding: 35px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      transition:
+        border-color 0.3s,
+        transform 0.3s,
+        background 0.3s;
+    }
+
+    .contact-card:hover {
+      border-color: var(--accent);
+      background: #202020;
+      transform: translateY(-5px);
+    }
+
+    .contact-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .contact-logo-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 72px;
+      height: 72px;
+      border: 1px solid var(--border);
+      background: #222;
+      border-radius: 15px;
+    }
+
+    .contact-logo {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+    }
+
+    .contact-arrow {
+      font-size: 25px;
+      color: var(--accent);
+      transition: transform 0.3s;
+    }
+
+    .contact-card:hover .contact-arrow {
+      transform: translate(4px, -4px);
+    }
+
+    .contact-card h3 {
+      font-size: 29px;
+      font-weight: 500;
+      letter-spacing: -0.04em;
+      margin-bottom: 9px;
+    }
+
+    .contact-value {
+      color: var(--accent);
+      font-size: 15px;
+      overflow-wrap: anywhere;
+      margin-bottom: 10px;
+    }
+
+    .contact-description {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .contact-card.featured {
+      background: #211f1c;
+      border-color: rgba(181,164,138,0.3);
+    }
+
+    .contact-card.featured:hover {
+      background: #28241f;
+    }
+
+    .contact-card-button {
+      width: 100%;
+      text-align: left;
+      color: var(--white);
+    }
+
+    .copy-feedback {
+      display: block;
+      min-height: 17px;
+      margin-top: 8px;
+      font-size: 11px;
+      color: var(--accent);
+    }
+
+    /* LOCATION AND WORK */
+
+    .availability-section {
+      padding: 95px 0;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .availability-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .availability-content h2 {
+      font-size: clamp(35px,4vw,58px);
+      font-weight: 500;
+      letter-spacing: -0.05em;
+      line-height: 1.2;
+    }
+
+    .availability-content p {
+      max-width: 400px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* PORTFOLIO */
+
+    .portfolio-section {
+      padding: 115px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-title {
+      font-size: clamp(43px,6vw,80px);
+      font-weight: 500;
+      letter-spacing: -0.06em;
+      line-height: 1.1;
+    }
+
+    .portfolio-description {
+      max-width: 650px;
+      margin-top: 25px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .portfolio-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 40px;
+    }
+
+    .portfolio-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 215px;
+      padding: 20px 28px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: background 0.3s, color 0.3s, transform 0.3s;
+    }
+
+    .portfolio-button:hover {
+      transform: translateY(-3px);
+    }
+
+    .portfolio-button.primary {
+      background: var(--white);
+      color: #111;
+    }
+
+    .portfolio-button.primary:hover {
+      background: var(--accent);
+    }
+
+    .portfolio-button.secondary {
+      border: 1px solid var(--accent);
+    }
+
+    .portfolio-button.secondary:hover {
+      background: var(--accent);
+      color: #111;
+    }
+
+    /* FINAL CTA */
+
+    .final-cta {
+      padding: 125px 0;
+      text-align: center;
+      background: #151515;
+    }
+
+    .final-cta h2 {
+      font-size: clamp(48px,7vw,95px);
+      font-weight: 500;
+      letter-spacing: -0.065em;
+      line-height: 1.12;
+    }
+
+    .final-cta p {
+      max-width: 550px;
+      margin: 28px auto 35px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .final-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 32px;
+      background: var(--white);
+      color: #111;
+      font-size: 13px;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .final-button:hover {
+      background: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* ANIMATIONS */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s, transform 0.8s;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 86px;
+        left: 0;
+        width: 100%;
+        padding: 35px 6%;
+        background: #151515;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .page-hero {
+        padding: 155px 0 75px;
+      }
+
+      .hero-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-bottom p {
+        font-size: 15px;
+      }
+
+      .contact-platforms {
+        padding: 80px 0;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-card {
+        min-height: 235px;
+      }
+
+      .availability-section,
+      .portfolio-section,
+      .final-cta {
+        padding: 80px 0;
+      }
+
+      .availability-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact-card {
+        padding: 25px;
+      }
+
+      .contact-logo-wrap {
+        width: 60px;
+        height: 60px;
+      }
+
+      .contact-logo {
+        width: 38px;
+        height: 38px;
+      }
+
+      .portfolio-buttons {
+        flex-direction: column;
+      }
+
+      .portfolio-button,
+      .final-button {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+  <nav class="navbar container" aria-label="Main navigation">
+
+    <a href="index.html" class="logo">
+      JCNPAI<span>.</span>
+    </a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="works.html">My Works</a>
+      <a href="experience.html">Experience</a>
+      <a href="contact.html" class="active" aria-current="page">Contact</a>
+    </div>
+
+    <a href="#contact-platforms" class="nav-cta">
+      LET'S TALK ↗
+    </a>
+
+    <button
+      type="button"
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="navLinks"
+    >☰</button>
+
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="page-hero">
+  <div class="container">
+
+    <p class="eyebrow reveal">
+      HAVE A PROJECT IN MIND?
+    </p>
+
+    <h1 class="reveal">
+      Let's <span class="italic">Talk.</span>
+    </h1>
+
+    <div class="hero-bottom reveal">
+
+      <p>
+        Whether you're looking for a video editor,
+        graphic designer, web designer, or social
+        media manager, I'd love to hear about
+        what you're working on. Feel free to reach
+        out using any of the platforms below.
+      </p>
+
+      <a href="#contact-platforms" class="hero-label">
+        GET IN TOUCH ↓
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT PLATFORMS -->
+
+<section class="contact-platforms" id="contact-platforms">
+  <div class="container">
+
+    <div class="contact-grid">
+
+      <!-- EMAIL -->
+
+      <a
+        href="mailto:jcbroqueza30@gmail.com"
+        class="contact-card featured reveal"
+      >
+        <div class="contact-card-top">
+
+          <div class="contact-logo-wrap">
+            <img
+              src="images/contact/gmail.png"
+              alt="Gmail logo"
+              class="contact-logo"
+              loading="lazy"
+            >
+          </div>
+
+          <span class="contact-arrow">↗</span>
+
+        </div>
+
+        <div>
+          <h3>Email</h3>
+
+          <p class="contact-value">
+            jcbroqueza30@gmail.com
+          </p>
+
+          <p class="contact-description">
+            Best for project inquiries, job opportunities,
+            and professional collaborations.
+          </p>
+        </div>
+      </a>
+
+      <!-- WHATSAPP -->
+
+      <a
+        href="https://wa.me/639938729697"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-card reveal"
+      >
+        <div class="contact-card-top">
+
+          <div class="contact-logo-wrap">
+            <img
+              src="images/contact/whatsapp.png"
+              alt="WhatsApp logo"
+              class="contact-logo"
+              loading="lazy"
+            >
+          </div>
+
+          <span class="contact-arrow">↗</span>
+
+        </div>
+
+        <div>
+          <h3>WhatsApp</h3>
+
+          <p class="contact-value">
+            +63 993 872 9697
+          </p>
+
+          <p class="contact-description">
+            Message me directly through WhatsApp
+            for a quick conversation.
+          </p>
+        </div>
+      </a>
+
+      <!-- TELEGRAM -->
+
+      <a
+        href="https://t.me/jcbroqueza30"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-card reveal"
+      >
+        <div class="contact-card-top">
+
+          <div class="contact-logo-wrap">
+            <img
+              src="images/contact/telegram.png"
+              alt="Telegram logo"
+              class="contact-logo"
+              loading="lazy"
+            >
+          </div>
+
+          <span class="contact-arrow">↗</span>
+
+        </div>
+
+        <div>
+          <h3>Telegram</h3>
+
+          <p class="contact-value">
+            @jcbroqueza30
+          </p>
+
+          <p class="contact-description">
+            Connect with me on Telegram to discuss
+            creative projects and opportunities.
+          </p>
+        </div>
+      </a>
+
+      <!-- DISCORD -->
+
+      <button
+        type="button"
+        class="contact-card contact-card-button reveal"
+        id="discordCard"
+        aria-label="Copy Discord username jcnpai"
+      >
+        <div class="contact-card-top">
+
+          <div class="contact-logo-wrap">
+            <img
+              src="images/contact/discord.png"
+              alt="Discord logo"
+              class="contact-logo"
+              loading="lazy"
+            >
+          </div>
+
+          <span class="contact-arrow">↗</span>
+
+        </div>
+
+        <div>
+          <h3>Discord</h3>
+
+          <p class="contact-value">
+            jcnpai
+          </p>
+
+          <p class="contact-description">
+            Click this card to copy my Discord
+            username and add me on Discord.
+          </p>
+
+          <span
+            class="copy-feedback"
+            id="discordFeedback"
+            role="status"
+            aria-live="polite"
+          ></span>
+        </div>
+      </button>
+
+      <!-- LINKEDIN -->
+
+      <a
+        href="https://www.linkedin.com/in/jcbroqueza"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-card reveal"
+      >
+        <div class="contact-card-top">
+
+          <div class="contact-logo-wrap">
+            <img
+              src="images/contact/linkedin.png"
+              alt="LinkedIn logo"
+              class="contact-logo"
+              loading="lazy"
+            >
+          </div>
+
+          <span class="contact-arrow">↗</span>
+
+        </div>
+
+        <div>
+          <h3>LinkedIn</h3>
+
+          <p class="contact-value">
+            linkedin.com/in/jcbroqueza
+          </p>
+
+          <p class="contact-description">
+            Connect with me professionally,
+            explore my background, and discuss
+            potential opportunities.
+          </p>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- LOCATION AND WORK -->
+
+<section class="availability-section">
+  <div class="container availability-content reveal">
+
+    <div>
+      <p class="eyebrow">
+        WHERE I WORK
+      </p>
+
+      <h2>
+        Based in the Philippines.<br>
+        <span class="italic">Working worldwide.</span>
+      </h2>
+    </div>
+
+    <p>
+      I've collaborated with businesses across
+      the United States, Australia, the United
+      Kingdom, and Canada, providing remote
+      creative and digital marketing services.
+    </p>
+
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+
+<section class="portfolio-section">
+  <div class="container reveal">
+
+    <p class="eyebrow">
+      BEFORE WE COLLABORATE
+    </p>
+
+    <h2 class="section-title">
+      Explore my <span class="italic">work.</span>
+    </h2>
+
+    <p class="portfolio-description">
+      Want to get a better idea of what I can create?
+      Explore my selected projects, browse my
+      extended portfolio, or check out my
+      previous creative work.
+    </p>
+
+    <div class="portfolio-buttons">
+
+      <a
+        href="works.html"
+        class="portfolio-button primary"
+      >
+        View My Works ↗
+      </a>
+
+      <a
+        href="https://drive.google.com/drive/folders/1Q5pIZ8iX0K07bzXfV1ZvYE78ZRh7fNf3?usp=drive_link"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="portfolio-button secondary"
+      >
+        Google Drive Portfolio ↗
+      </a>
+
+      <a
+        href="https://thesocialmediamanager.my.canva.site/john-chris-broqueza"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="portfolio-button secondary"
+      >
+        Previous Portfolio ↗
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+
+<section class="final-cta">
+  <div class="container reveal">
+
+    <p class="eyebrow">
+      LET'S MAKE SOMETHING HAPPEN
+    </p>
+
+    <h2>
+      Your next big idea<br>
+      starts <span class="italic">here.</span>
+    </h2>
+
+    <p>
+      From a single creative project to ongoing
+      content support, I'm always interested
+      in meaningful collaborations.
+    </p>
+
+    <a
+      href="mailto:jcbroqueza30@gmail.com"
+      class="final-button"
+    >
+      Let's Work Together ↗
+    </a>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="container footer-inner">
+
+    <span>
+      © <span id="year"></span> John Chris Broqueza
+    </span>
+
+    <span>
+      Designed with purpose. Built with creativity.
+    </span>
+
+  </div>
+</footer>
+
+<script>
+  /* MOBILE NAVIGATION */
+
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  menuToggle.addEventListener("click", () => {
+    const open = navLinks.classList.toggle("open");
+
+    menuToggle.textContent = open ? "✕" : "☰";
+
+    menuToggle.setAttribute(
+      "aria-expanded",
+      String(open)
+    );
+
+    menuToggle.setAttribute(
+      "aria-label",
+      open ? "Close navigation menu" : "Open navigation menu"
+    );
+  });
+
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menuToggle.textContent = "☰";
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  /* COPY DISCORD USERNAME */
+
+  const discordCard = document.getElementById("discordCard");
+  const discordFeedback = document.getElementById("discordFeedback");
+
+  discordCard.addEventListener("click", async () => {
+    const username = "jcnpai";
+
+    try {
+      await navigator.clipboard.writeText(username);
+
+      discordFeedback.textContent = "Username copied!";
+
+    } catch (error) {
+      discordFeedback.textContent =
+        "Copy manually: " + username;
+    }
+  });
+
+  /* SCROLL REVEAL */
+
+  const revealElements = document.querySelectorAll(".reveal");
+
+  if (
+    "IntersectionObserver" in window &&
+    !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  ) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    revealElements.forEach(element => {
+      observer.observe(element);
+    });
+
+  } else {
+    revealElements.forEach(element => {
+      element.classList.add("visible");
+    });
+  }
+
+  /* CURRENT YEAR */
+
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>

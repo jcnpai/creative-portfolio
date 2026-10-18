@@ -1,0 +1,1216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Learn about John Chris Broqueza, a multidisciplinary creative professional with 8 years of experience in design, video editing and digital marketing.">
+<title>About Me | John Chris Broqueza</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #101010;
+  --surface: #191919;
+  --surface2: #222;
+  --white: #f5f3ee;
+  --muted: #999;
+  --accent: #b5a48a;
+  --border: rgba(255,255,255,.12);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+button { font: inherit; cursor: pointer; }
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 6%;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.italic {
+  color: var(--accent);
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.section { padding: 120px 0; }
+
+.section-title {
+  font-size: clamp(44px, 6vw, 78px);
+  font-weight: 500;
+  letter-spacing: -.055em;
+  line-height: 1.12;
+}
+
+.section-description {
+  max-width: 650px;
+  margin-top: 25px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+/* NAVIGATION */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(16,16,16,.93);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+  height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+
+.logo span { color: var(--accent); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-size: 13px;
+  color: var(--muted);
+  transition: color .3s;
+  position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active { color: var(--white); }
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--accent);
+}
+
+.nav-cta {
+  padding: 13px 20px;
+  border: 1px solid var(--border);
+  font-size: 12px;
+  letter-spacing: 1px;
+  transition: .3s;
+}
+
+.nav-cta:hover {
+  background: var(--white);
+  color: var(--bg);
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: white;
+  font-size: 28px;
+}
+
+/* PAGE HERO */
+
+.page-hero {
+  padding: 185px 0 90px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::after {
+  content: "ABOUT";
+  position: absolute;
+  right: -3%;
+  bottom: -12%;
+  font-size: clamp(150px, 28vw, 430px);
+  font-weight: 700;
+  letter-spacing: -.09em;
+  color: rgba(255,255,255,.018);
+  pointer-events: none;
+}
+
+.page-hero h1 {
+  font-size: clamp(75px, 13vw, 180px);
+  font-weight: 600;
+  letter-spacing: -.085em;
+  line-height: 1;
+}
+
+.hero-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.hero-bottom p {
+  max-width: 530px;
+  font-size: 18px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.scroll-link {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+/* INTRODUCTION */
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  align-items: center;
+  gap: 9%;
+}
+
+.portrait-wrap {
+  position: relative;
+  min-width: 0;
+}
+
+.portrait-frame {
+  aspect-ratio: 4 / 5;
+  background: linear-gradient(145deg,#36332e,#1a1a1a);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  position: relative;
+}
+
+.portrait-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.portrait-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(80px, 13vw, 160px);
+  z-index: 0;
+}
+
+.portrait-frame img {
+  position: relative;
+  z-index: 1;
+}
+
+.portrait-tag {
+  position: absolute;
+  bottom: -20px;
+  right: -15px;
+  background: var(--accent);
+  color: #111;
+  padding: 20px 25px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  z-index: 3;
+}
+
+.intro-content h2 {
+  font-size: clamp(38px, 5vw, 65px);
+  line-height: 1.15;
+  letter-spacing: -.055em;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.intro-content p {
+  font-size: 16px;
+  line-height: 1.95;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.intro-content strong {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.intro-signature {
+  color: var(--accent);
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 32px;
+  margin-top: 35px;
+}
+
+/* STATS */
+
+.stats-section {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 65px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+}
+
+.stat {
+  padding: 10px 30px;
+  border-right: 1px solid var(--border);
+}
+
+.stat:first-child { padding-left: 0; }
+.stat:last-child { border-right: 0; }
+
+.stat-number {
+  font-size: clamp(48px, 6vw, 85px);
+  letter-spacing: -.06em;
+  font-weight: 500;
+}
+
+.stat-number span { color: var(--accent); }
+
+.stat-label {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 12px;
+}
+
+/* SKILLS */
+
+.skills-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 35px;
+  margin-bottom: 50px;
+}
+
+.skills-heading p {
+  max-width: 400px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.skill-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+.skill-tab {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  padding: 13px 20px;
+  font-size: 12px;
+  transition: .3s;
+}
+
+.skill-tab:hover {
+  border-color: var(--accent);
+  color: var(--white);
+}
+
+.skill-tab.active {
+  background: var(--accent);
+  color: #111;
+  border-color: var(--accent);
+}
+
+.skill-panel {
+  display: none;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+}
+
+.skill-panel.active {
+  display: grid;
+  animation: panelIn .4s ease;
+}
+
+@keyframes panelIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.skill-card {
+  padding: 30px;
+  min-height: 160px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: .35s;
+}
+
+.skill-card:hover {
+  background: #24221f;
+  border-color: rgba(181,164,138,.5);
+  transform: translateY(-5px);
+}
+
+.skill-card .skill-icon {
+  color: var(--accent);
+  font-size: 27px;
+  margin-bottom: 25px;
+}
+
+.skill-card h3 {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.skill-card p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+  margin-top: 10px;
+}
+
+/* EXPERIENCE TIMELINE */
+
+.journey {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+.timeline {
+  margin-top: 65px;
+  border-top: 1px solid var(--border);
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 100px 1fr 30px;
+  gap: 35px;
+  padding: 35px 15px;
+  border-bottom: 1px solid var(--border);
+  transition: background .3s;
+}
+
+.timeline-item:hover { background: rgba(255,255,255,.025); }
+
+.timeline-index {
+  color: var(--accent);
+  font-size: 13px;
+}
+
+.timeline-item h3 {
+  font-size: clamp(20px, 2.5vw, 30px);
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.timeline-item p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.85;
+  max-width: 750px;
+}
+
+.timeline-arrow {
+  color: var(--accent);
+  font-size: 22px;
+}
+
+/* PHILOSOPHY */
+
+.philosophy {
+  text-align: center;
+}
+
+.quote {
+  max-width: 950px;
+  margin: auto;
+  font-size: clamp(35px, 5vw, 68px);
+  line-height: 1.25;
+  letter-spacing: -.05em;
+  font-weight: 500;
+}
+
+.quote-credit {
+  margin-top: 35px;
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+/* CONTACT */
+
+.contact-section {
+  border-top: 1px solid var(--border);
+  padding: 120px 0;
+}
+
+.contact-title {
+  display: inline-block;
+  font-size: clamp(50px, 8vw, 110px);
+  font-weight: 500;
+  letter-spacing: -.065em;
+  line-height: 1.1;
+  transition: color .3s;
+}
+
+.contact-title:hover { color: var(--accent); }
+
+.contact-actions {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 25px;
+  font-size: 13px;
+  transition: .3s;
+}
+
+.btn-primary {
+  background: var(--white);
+  color: var(--bg);
+}
+
+.btn-primary:hover {
+  background: var(--accent);
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  border: 1px solid var(--border);
+}
+
+.btn-outline:hover { border-color: var(--white); }
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 30px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* REVEAL ANIMATIONS */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* TABLET */
+
+@media(max-width: 1000px) {
+  .intro-grid { gap: 6%; }
+  .skill-panel { grid-template-columns: repeat(2,1fr); }
+  .nav-links { gap: 18px; }
+}
+
+/* MOBILE NAVIGATION */
+
+@media(max-width: 900px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 86px;
+    left: 0;
+    width: 100%;
+    background: #151515;
+    padding: 35px 6%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-links.open { display: flex; }
+  .nav-links a.active::after { display: none; }
+  .nav-cta { display: none; }
+  .menu-toggle { display: block; }
+}
+
+/* SMALL SCREENS */
+
+@media(max-width: 768px) {
+  .page-hero { padding: 155px 0 75px; }
+  .hero-bottom { flex-direction: column; align-items: flex-start; }
+  .intro-grid { grid-template-columns: 1fr; gap: 75px; }
+  .portrait-wrap { max-width: 480px; }
+  .skills-heading { flex-direction: column; align-items: flex-start; }
+  .section { padding: 85px 0; }
+  .stats-grid { gap: 10px; }
+  .stat { padding: 10px; }
+  .timeline-item { grid-template-columns: 45px 1fr 20px; gap: 15px; }
+}
+
+@media(max-width: 520px) {
+  .page-hero h1 { font-size: clamp(65px, 17vw, 100px); }
+  .hero-bottom p { font-size: 15px; }
+  .skill-panel { grid-template-columns: 1fr; }
+  .skill-card { min-height: 125px; padding: 25px; }
+  .skill-tab { padding: 11px 14px; }
+  .stats-grid { grid-template-columns: 1fr; }
+  .stat {
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+  .stat:last-child { border-bottom: 0; }
+  .footer-inner { flex-direction: column; }
+  .portrait-tag { right: 0; }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<header>
+  <nav class="navbar container" aria-label="Main navigation">
+
+    <a href="index.html" class="logo">JCNPAI<span>.</span></a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active" aria-current="page">About Me</a>
+      <a href="works.html">My Works</a>
+      <a href="experience.html">Experience</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <a href="contact.html" class="nav-cta">LET'S TALK ↗</a>
+
+    <button
+      type="button"
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation menu"
+      aria-controls="navLinks"
+      aria-expanded="false"
+    >☰</button>
+
+  </nav>
+</header>
+
+<main>
+
+<!-- ABOUT HERO -->
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow reveal">GET TO KNOW ME</p>
+
+    <h1 class="reveal">
+      About <span class="italic">Me.</span>
+    </h1>
+
+    <div class="hero-bottom reveal">
+      <p>
+        Behind every creative project is a story.
+        Here's a little about mine, the experience
+        I've gained, and what drives me to create.
+      </p>
+
+      <a href="#introduction" class="scroll-link">
+        EXPLORE MY STORY ↓
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PERSONAL INTRODUCTION -->
+<section class="section" id="introduction">
+  <div class="container intro-grid">
+
+    <div class="portrait-wrap reveal">
+      <div class="portrait-frame">
+        <div class="portrait-fallback" aria-hidden="true">JCB.</div>
+        <img
+          src="images/about-me.png"
+          alt="Portrait of John Chris Broqueza"
+          onerror="this.remove()"
+        >
+      </div>
+
+      <div class="portrait-tag">
+        THE PERSON BEHIND THE PIXELS ↗
+      </div>
+    </div>
+
+    <div class="intro-content reveal">
+      <p class="eyebrow">HELLO, I'M JOHN CHRIS</p>
+
+      <h2>
+        A creative mind.<br>
+        A strategic thinker.<br>
+        <span class="italic">A storyteller.</span>
+      </h2>
+
+      <p>
+        I'm <strong>John Chris Broqueza</strong>,
+        a multidisciplinary creative professional
+        with 8 years of experience in graphic design,
+        video editing, social media management,
+        and digital content creation.
+      </p>
+
+      <p>
+        Over the years, I've worked with businesses
+        across different industries, helping them
+        communicate their message through engaging
+        visuals, compelling videos, and creative
+        marketing strategies.
+      </p>
+
+      <p>
+        My experience goes beyond making things look
+        good. I understand how creativity and business
+        goals work together. From producing social
+        media campaigns and promotional videos to
+        developing visual identities and websites,
+        I approach every project with both creativity
+        and purpose.
+      </p>
+
+      <p>
+        I enjoy learning new tools, exploring emerging
+        technologies, and finding better ways to
+        transform ideas into meaningful experiences.
+      </p>
+
+      <div class="intro-signature">
+        John Chris.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE STATISTICS -->
+<section class="stats-section">
+  <div class="container stats-grid">
+
+    <div class="stat reveal">
+      <div class="stat-number">8<span>+</span></div>
+      <p class="stat-label">Years of Creative Experience</p>
+    </div>
+
+    <div class="stat reveal">
+      <div class="stat-number">04</div>
+      <p class="stat-label">Core Creative Disciplines</p>
+    </div>
+
+    <div class="stat reveal">
+      <div class="stat-number">01</div>
+      <p class="stat-label">Goal: Create Meaningful Impact</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- INTERACTIVE SKILLS -->
+<section class="section" id="skills">
+  <div class="container">
+
+    <div class="skills-heading reveal">
+      <div>
+        <p class="eyebrow">WHAT I BRING TO THE TABLE</p>
+        <h2 class="section-title">
+          Skills & <span class="italic">Expertise.</span>
+        </h2>
+      </div>
+
+      <p>
+        A combination of creative skills, technical
+        knowledge, and digital marketing experience
+        that helps bring ideas to life.
+      </p>
+    </div>
+
+    <!-- INTERACTIVE FILTERS -->
+    <div class="skill-tabs reveal" role="tablist" aria-label="Skill categories">
+      <button type="button" class="skill-tab active"
+        id="tab-design" role="tab" aria-selected="true"
+        aria-controls="panel-design" data-tab="design">
+        Graphic Design
+      </button>
+
+      <button type="button" class="skill-tab"
+        id="tab-video" role="tab" aria-selected="false"
+        aria-controls="panel-video" data-tab="video" tabindex="-1">
+        Video Editing
+      </button>
+
+      <button type="button" class="skill-tab"
+        id="tab-social" role="tab" aria-selected="false"
+        aria-controls="panel-social" data-tab="social" tabindex="-1">
+        Social Media
+      </button>
+
+      <button type="button" class="skill-tab"
+        id="tab-web" role="tab" aria-selected="false"
+        aria-controls="panel-web" data-tab="web" tabindex="-1">
+        Web Design
+      </button>
+    </div>
+
+    <!-- GRAPHIC DESIGN -->
+    <div class="skill-panel active" id="panel-design"
+      role="tabpanel" aria-labelledby="tab-design">
+
+      <div class="skill-card">
+        <div class="skill-icon">✦</div>
+        <h3>Adobe Photoshop</h3>
+        <p>Photo editing, compositing, and digital graphics.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">◈</div>
+        <h3>Adobe Illustrator</h3>
+        <p>Vector illustrations and brand assets.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">▧</div>
+        <h3>Adobe InDesign</h3>
+        <p>Professional layouts and print materials.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">✳</div>
+        <h3>Canva</h3>
+        <p>Marketing graphics and social media designs.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">◇</div>
+        <h3>Brand Identity</h3>
+        <p>Visual concepts and cohesive brand design.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">▣</div>
+        <h3>Marketing Materials</h3>
+        <p>Posters, banners, advertising, and promotions.</p>
+      </div>
+    </div>
+
+    <!-- VIDEO EDITING -->
+    <div class="skill-panel" id="panel-video"
+      role="tabpanel" aria-labelledby="tab-video" hidden>
+
+      <div class="skill-card">
+        <div class="skill-icon">▶</div>
+        <h3>Adobe Premiere Pro</h3>
+        <p>Professional video editing and storytelling.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">✧</div>
+        <h3>Adobe After Effects</h3>
+        <p>Motion graphics, animation, and visual effects.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">◉</div>
+        <h3>DaVinci Resolve</h3>
+        <p>Video editing and color grading.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">✂</div>
+        <h3>CapCut</h3>
+        <p>Short-form videos and social media content.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">▤</div>
+        <h3>Short-form Content</h3>
+        <p>Reels, TikToks, Shorts, and promotional videos.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">✺</div>
+        <h3>AI Video Tools</h3>
+        <p>AI-assisted creative production and workflows.</p>
+      </div>
+    </div>
+
+    <!-- SOCIAL MEDIA -->
+    <div class="skill-panel" id="panel-social"
+      role="tabpanel" aria-labelledby="tab-social" hidden>
+
+      <div class="skill-card">
+        <div class="skill-icon">◎</div>
+        <h3>Content Strategy</h3>
+        <p>Content planning and campaign development.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">✎</div>
+        <h3>Copywriting</h3>
+        <p>Engaging captions and marketing messages.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">↗</div>
+        <h3>Social Media Growth</h3>
+        <p>Audience engagement and content optimization.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">◫</div>
+        <h3>Content Calendars</h3>
+        <p>Campaign scheduling and platform management.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">✉</div>
+        <h3>Email Marketing</h3>
+        <p>Promotional campaigns and customer communication.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">⌕</div>
+        <h3>SEO Fundamentals</h3>
+        <p>Search-friendly content and digital visibility.</p>
+      </div>
+    </div>
+
+    <!-- WEB DESIGN -->
+    <div class="skill-panel" id="panel-web"
+      role="tabpanel" aria-labelledby="tab-web" hidden>
+
+      <div class="skill-card">
+        <div class="skill-icon">⌘</div>
+        <h3>Web Design</h3>
+        <p>Creative and functional website layouts.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">▥</div>
+        <h3>Responsive Design</h3>
+        <p>Layouts for desktop, tablet, and mobile.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">◈</div>
+        <h3>HTML & CSS</h3>
+        <p>Website structure and visual styling.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">⌁</div>
+        <h3>Interactive Interfaces</h3>
+        <p>Interactive layouts and user experiences.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">◉</div>
+        <h3>Visual Consistency</h3>
+        <p>Bringing brand identity into web experiences.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon">↗</div>
+        <h3>Portfolio Websites</h3>
+        <p>Creative websites that showcase professional work.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROFESSIONAL JOURNEY -->
+<section class="section journey">
+  <div class="container">
+
+    <p class="eyebrow reveal">EXPERIENCE THAT SHAPED ME</p>
+
+    <h2 class="section-title reveal">
+      My Creative <span class="italic">Journey.</span>
+    </h2>
+
+    <p class="section-description reveal">
+      Every role, project, and collaboration has helped
+      shape the way I approach creativity and business.
+    </p>
+
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <span class="timeline-index">01</span>
+        <div>
+          <h3>Graphic Design & Visual Storytelling</h3>
+          <p>
+            Creating marketing graphics, promotional
+            materials, digital designs, and visual
+            content for businesses across industries.
+          </p>
+        </div>
+        <span class="timeline-arrow">↗</span>
+      </div>
+
+      <div class="timeline-item reveal">
+        <span class="timeline-index">02</span>
+        <div>
+          <h3>Video Editing & Motion Graphics</h3>
+          <p>
+            Producing engaging video content, social
+            media reels, promotional campaigns, and
+            real estate marketing videos using
+            professional editing software.
+          </p>
+        </div>
+        <span class="timeline-arrow">↗</span>
+      </div>
+
+      <div class="timeline-item reveal">
+        <span class="timeline-index">03</span>
+        <div>
+          <h3>Social Media & Marketing Strategy</h3>
+          <p>
+            Planning campaigns, managing content,
+            writing copy, and helping brands strengthen
+            their online presence. My retail marketing
+            experience also includes developing
+            customer loyalty and promotional programs.
+          </p>
+        </div>
+        <span class="timeline-arrow">↗</span>
+      </div>
+
+      <div class="timeline-item reveal">
+        <span class="timeline-index">04</span>
+        <div>
+          <h3>Web Design & Digital Experiences</h3>
+          <p>
+            Expanding my creative capabilities into
+            website design, interactive experiences,
+            and digital tools that connect design
+            with functionality.
+          </p>
+        </div>
+        <span class="timeline-arrow">↗</span>
+      </div>
+
+    </div>
+
+    <div style="margin-top:45px" class="reveal">
+      <a href="experience.html" class="btn btn-outline">
+        Explore My Experience ↗
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CREATIVE PHILOSOPHY -->
+<section class="section philosophy">
+  <div class="container reveal">
+
+    <p class="eyebrow">WHAT I BELIEVE IN</p>
+
+    <h2 class="quote">
+      "Great design captures attention.
+      <span class="italic">Great storytelling</span>
+      creates connection."
+    </h2>
+
+    <p class="quote-credit">— MY CREATIVE PHILOSOPHY</p>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section">
+  <div class="container reveal">
+
+    <p class="eyebrow">LET'S CREATE SOMETHING MEANINGFUL</p>
+
+    <a href="contact.html" class="contact-title">
+      Let's work<br>together. ↗
+    </a>
+
+    <div class="contact-actions">
+      <a href="works.html" class="btn btn-primary">
+        Explore My Work ↗
+      </a>
+
+      <a href="resume.pdf" download class="btn btn-outline">
+        Download My CV ↓
+      </a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> John Chris Broqueza</span>
+    <span>Designed with purpose. Built with creativity.</span>
+  </div>
+</footer>
+
+<script>
+/* MOBILE NAVIGATION */
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  const open = navLinks.classList.toggle("open");
+  menuToggle.textContent = open ? "✕" : "☰";
+  menuToggle.setAttribute("aria-expanded", String(open));
+  menuToggle.setAttribute("aria-label",
+    open ? "Close navigation menu" : "Open navigation menu");
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuToggle.textContent = "☰";
+    menuToggle.setAttribute("aria-expanded", "false");
+  });
+});
+
+/* INTERACTIVE SKILL TABS */
+const tabs = Array.from(document.querySelectorAll(".skill-tab"));
+const panels = document.querySelectorAll(".skill-panel");
+
+function activateTab(tab) {
+  tabs.forEach(item => {
+    const active = item === tab;
+    item.classList.toggle("active", active);
+    item.setAttribute("aria-selected", String(active));
+    item.tabIndex = active ? 0 : -1;
+  });
+
+  panels.forEach(panel => {
+    const active = panel.id === "panel-" + tab.dataset.tab;
+    panel.classList.toggle("active", active);
+    panel.hidden = !active;
+  });
+}
+
+tabs.forEach((tab, index) => {
+  tab.addEventListener("click", () => activateTab(tab));
+
+  tab.addEventListener("keydown", event => {
+    let next = index;
+
+    if (event.key === "ArrowRight") next = (index + 1) % tabs.length;
+    else if (event.key === "ArrowLeft")
+      next = (index - 1 + tabs.length) % tabs.length;
+    else if (event.key === "Home") next = 0;
+    else if (event.key === "End") next = tabs.length - 1;
+    else return;
+
+    event.preventDefault();
+    activateTab(tabs[next]);
+    tabs[next].focus();
+  });
+});
+
+/* SCROLL REVEAL */
+const revealElements = document.querySelectorAll(".reveal");
+
+if (
+  "IntersectionObserver" in window &&
+  !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  revealElements.forEach(el => observer.observe(el));
+} else {
+  revealElements.forEach(el => el.classList.add("visible"));
+}
+
+/* COPYRIGHT */
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
+
+</body>
+</html>

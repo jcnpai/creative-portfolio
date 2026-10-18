@@ -1,0 +1,1172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>John Chris Broqueza | Creative Portfolio</title>
+
+  <meta name="description"
+    content="Portfolio of John Chris Broqueza, a Video Editor, Graphic Designer, Web Designer, and Social Media Manager working with businesses worldwide.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #101010;
+      --surface: #191919;
+      --white: #f5f3ee;
+      --muted: #999999;
+      --accent: #b5a48a;
+      --border: rgba(255,255,255,0.12);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: "DM Sans", sans-serif;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    video:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 6%;
+    }
+
+    .italic {
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-weight: 500;
+      color: var(--accent);
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    /* NAVIGATION */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(16,16,16,0.94);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -2px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      color: var(--muted);
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--white);
+    }
+
+    .nav-links a.active {
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 10px;
+    }
+
+    .nav-cta {
+      padding: 13px 20px;
+      border: 1px solid var(--border);
+      font-size: 12px;
+      letter-spacing: 1px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .nav-cta:hover {
+      background: var(--white);
+      color: var(--bg);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 0;
+      color: var(--white);
+      font-size: 28px;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 160px 0 110px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "JCB";
+      position: absolute;
+      bottom: -10%;
+      right: -3%;
+      font-size: clamp(180px,30vw,480px);
+      font-weight: 700;
+      letter-spacing: -0.1em;
+      color: rgba(255,255,255,0.018);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      align-items: center;
+      gap: 65px;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+
+    .hero h1 {
+      font-size: clamp(56px,7vw,105px);
+      font-weight: 600;
+      letter-spacing: -0.075em;
+      line-height: 1.07;
+      margin-bottom: 28px;
+    }
+
+    .hero-role {
+      color: var(--accent);
+      font-size: 13px;
+      letter-spacing: 1.1px;
+      line-height: 2;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    .hero-description {
+      max-width: 590px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.95;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 38px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      padding: 19px 27px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: background 0.3s, color 0.3s, transform 0.3s;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    .button-primary {
+      background: var(--white);
+      color: #111;
+    }
+
+    .button-primary:hover {
+      background: var(--accent);
+    }
+
+    .button-secondary {
+      border: 1px solid var(--accent);
+      color: var(--white);
+    }
+
+    .button-secondary:hover {
+      background: var(--accent);
+      color: #111;
+    }
+
+    /* INTRO VIDEO */
+
+    .video-panel {
+      position: relative;
+      padding: 13px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+    }
+
+    .video-frame {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      background: #080808;
+      overflow: hidden;
+    }
+
+    .video-frame video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 18px 7px 5px;
+    }
+
+    .video-label span:first-child {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--accent);
+    }
+
+    .video-label span:last-child {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .video-note {
+      position: absolute;
+      top: -16px;
+      right: -17px;
+      background: var(--accent);
+      color: #111;
+      padding: 12px 16px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      z-index: 2;
+    }
+
+    /* STATS */
+
+    .stats-section {
+      border-bottom: 1px solid var(--border);
+      background: #151515;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .stat {
+      padding: 48px 35px;
+      border-right: 1px solid var(--border);
+    }
+
+    .stat:first-child {
+      padding-left: 0;
+    }
+
+    .stat:last-child {
+      border-right: none;
+    }
+
+    .stat-number {
+      display: block;
+      color: var(--white);
+      font-size: clamp(34px,4.3vw,60px);
+      font-weight: 500;
+      letter-spacing: -0.06em;
+      margin-bottom: 10px;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    /* SECTION HEADERS */
+
+    .section-title {
+      font-size: clamp(43px,6vw,80px);
+      font-weight: 500;
+      letter-spacing: -0.06em;
+      line-height: 1.12;
+    }
+
+    .section-description {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+      max-width: 630px;
+      margin-top: 24px;
+    }
+
+    /* EXPERTISE */
+
+    .expertise-section {
+      padding: 120px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 60px;
+    }
+
+    .expertise-card {
+      padding: 38px;
+      min-height: 270px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .expertise-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+    }
+
+    .expertise-number {
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    .expertise-card h3 {
+      font-size: clamp(23px,2.5vw,32px);
+      font-weight: 500;
+      letter-spacing: -0.045em;
+      margin-bottom: 15px;
+    }
+
+    .expertise-card p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* ABOUT PREVIEW */
+
+    .about-section {
+      padding: 125px 0;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 95px;
+      align-items: start;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 2;
+      margin-bottom: 23px;
+    }
+
+    .about-copy .button {
+      margin-top: 15px;
+    }
+
+    /* PAGE LINKS */
+
+    .explore-section {
+      padding: 120px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .explore-list {
+      margin-top: 55px;
+      border-top: 1px solid var(--border);
+    }
+
+    .explore-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      padding: 32px 0;
+      border-bottom: 1px solid var(--border);
+      transition: padding 0.3s, color 0.3s;
+    }
+
+    .explore-link:hover {
+      padding-left: 15px;
+      color: var(--accent);
+    }
+
+    .explore-link-main {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .explore-number {
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    .explore-name {
+      font-size: clamp(23px,3vw,38px);
+      font-weight: 500;
+      letter-spacing: -0.04em;
+    }
+
+    .explore-arrow {
+      font-size: 26px;
+      color: var(--accent);
+    }
+
+    /* CONTACT CTA */
+
+    .contact-section {
+      padding: 130px 0;
+      background: #151515;
+    }
+
+    .contact-section h2 {
+      font-size: clamp(50px,8vw,110px);
+      font-weight: 500;
+      letter-spacing: -0.065em;
+      line-height: 1.12;
+    }
+
+    .contact-section p:not(.eyebrow) {
+      max-width: 610px;
+      margin: 30px 0 35px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* REVEAL */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1050px) {
+      .hero-grid {
+        gap: 40px;
+      }
+
+      .about-grid {
+        gap: 55px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 86px;
+        left: 0;
+        width: 100%;
+        padding: 35px 6%;
+        background: #151515;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 65px;
+      }
+
+      .hero-copy {
+        max-width: 760px;
+      }
+
+      .video-panel {
+        max-width: 570px;
+        width: 100%;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        min-height: auto;
+        padding: 155px 0 80px;
+      }
+
+      .hero h1 {
+        font-size: clamp(54px,11vw,80px);
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stat,
+      .stat:first-child {
+        padding: 28px 0;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .stat:last-child {
+        border-bottom: none;
+      }
+
+      .expertise-section,
+      .about-section,
+      .explore-section,
+      .contact-section {
+        padding: 80px 0;
+      }
+
+      .expertise-grid {
+        grid-template-columns: 1fr;
+        margin-top: 40px;
+      }
+
+      .expertise-card {
+        min-height: 235px;
+        padding: 30px;
+      }
+
+      .explore-link-main {
+        gap: 15px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+
+      .video-note {
+        right: 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .hero-buttons .button {
+        width: 100%;
+      }
+
+      .explore-link {
+        padding: 26px 0;
+      }
+
+      .explore-arrow {
+        font-size: 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+  <nav class="navbar container" aria-label="Main navigation">
+
+    <a href="index.html" class="logo">
+      JCNPAI<span>.</span>
+    </a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="works.html">My Works</a>
+      <a href="experience.html">Experience</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <a href="contact.html" class="nav-cta">
+      LET'S TALK ↗
+    </a>
+
+    <button
+      type="button"
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="navLinks"
+    >☰</button>
+
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="container hero-grid">
+
+    <div class="hero-copy reveal">
+
+      <p class="eyebrow">
+        WELCOME TO MY CREATIVE SPACE
+      </p>
+
+      <h1>
+        Hi, I'm<br>
+        <span class="italic">John Chris.</span>
+      </h1>
+
+      <p class="hero-role">
+        Video Editor · Graphic Designer<br>
+        Web Designer · Social Media Manager
+      </p>
+
+      <p class="hero-description">
+        I'm John Chris Broqueza, a creative professional
+        with 8 years of experience bringing ideas to life
+        through compelling videos, engaging designs,
+        responsive websites, and purposeful social media
+        content. I help brands turn creative ideas into
+        digital experiences that connect with people.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="works.html" class="button button-primary">
+          View My Works ↗
+        </a>
+
+        <a href="contact.html" class="button button-secondary">
+          Let's Connect ↗
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- INTRODUCTION VIDEO -->
+
+    <div class="video-panel reveal">
+
+      <div class="video-note">
+        MEET MY AI PERSONA
+      </div>
+
+      <div class="video-frame">
+
+        <video
+          id="introVideo"
+          controls
+          playsinline
+          preload="metadata"
+          poster="images/intro-cover.png"
+          aria-label="John Chris Broqueza introduction video"
+        >
+          <source
+            src="videos/my-introduction.mp4"
+            type="video/mp4"
+          >
+
+          Your browser does not support HTML5 video.
+        </video>
+
+      </div>
+
+      <div class="video-label">
+        <span>MY INTRODUCTION</span>
+        <span>PRESS PLAY ↗</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- PROFESSIONAL OVERVIEW -->
+
+<section class="stats-section">
+  <div class="container stats-grid">
+
+    <div class="stat reveal">
+      <span class="stat-number">8+</span>
+      <span class="stat-label">
+        Years of Creative Experience
+      </span>
+    </div>
+
+    <div class="stat reveal">
+      <span class="stat-number">4</span>
+      <span class="stat-label">
+        Core Creative Disciplines
+      </span>
+    </div>
+
+    <div class="stat reveal">
+      <span class="stat-number">Global</span>
+      <span class="stat-label">
+        Experience Working With International Businesses
+      </span>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+
+<section class="expertise-section">
+  <div class="container">
+
+    <div class="reveal">
+
+      <p class="eyebrow">
+        WHAT I DO
+      </p>
+
+      <h2 class="section-title">
+        Creativity with
+        <span class="italic">purpose.</span>
+      </h2>
+
+      <p class="section-description">
+        I combine visual storytelling, thoughtful design,
+        and digital strategy to help businesses communicate
+        clearly and stand out across different platforms.
+      </p>
+
+    </div>
+
+    <div class="expertise-grid">
+
+      <!-- VIDEO EDITING -->
+
+      <article class="expertise-card reveal">
+
+        <span class="expertise-number">01 /</span>
+
+        <div>
+          <h3>Video Editing</h3>
+
+          <p>
+            Short-form videos, Reels, TikTok content,
+            YouTube videos, promotional edits,
+            motion graphics, and engaging visual storytelling.
+          </p>
+        </div>
+
+      </article>
+
+      <!-- GRAPHIC DESIGN -->
+
+      <article class="expertise-card reveal">
+
+        <span class="expertise-number">02 /</span>
+
+        <div>
+          <h3>Graphic Design</h3>
+
+          <p>
+            Brand visuals, advertising materials,
+            social media graphics, promotional designs,
+            and creative assets built around each brand's identity.
+          </p>
+        </div>
+
+      </article>
+
+      <!-- WEB DESIGN -->
+
+      <article class="expertise-card reveal">
+
+        <span class="expertise-number">03 /</span>
+
+        <div>
+          <h3>Web Design</h3>
+
+          <p>
+            Responsive websites, landing pages,
+            interactive layouts, and modern digital
+            experiences designed for desktop and mobile.
+          </p>
+        </div>
+
+      </article>
+
+      <!-- SOCIAL MEDIA -->
+
+      <article class="expertise-card reveal">
+
+        <span class="expertise-number">04 /</span>
+
+        <div>
+          <h3>Social Media Management</h3>
+
+          <p>
+            Content planning, social media strategy,
+            copywriting, campaign development,
+            and consistent content across digital platforms.
+          </p>
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT PREVIEW -->
+
+<section class="about-section">
+  <div class="container about-grid">
+
+    <div class="reveal">
+
+      <p class="eyebrow">
+        A LITTLE ABOUT ME
+      </p>
+
+      <h2 class="section-title">
+        More than just
+        <span class="italic">creative work.</span>
+      </h2>
+
+    </div>
+
+    <div class="about-copy reveal">
+
+      <p>
+        I've always enjoyed the process of turning
+        an idea into something people can see,
+        experience, and connect with.
+      </p>
+
+      <p>
+        Over the years, I've worked with businesses
+        across the United States, Australia,
+        the United Kingdom, and Canada, combining
+        creative production with marketing and
+        communication experience.
+      </p>
+
+      <p>
+        Outside of client projects, I'm someone who
+        enjoys exploring technology, gaming, music,
+        and new ways to express creativity.
+      </p>
+
+      <a href="about.html" class="button button-secondary">
+        More About Me ↗
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPLORE WEBSITE -->
+
+<section class="explore-section">
+  <div class="container">
+
+    <div class="reveal">
+
+      <p class="eyebrow">
+        EXPLORE MY PORTFOLIO
+      </p>
+
+      <h2 class="section-title">
+        Get to <span class="italic">know my work.</span>
+      </h2>
+
+      <p class="section-description">
+        Everything you need to know about my projects,
+        professional background, and creative experience
+        is just a click away.
+      </p>
+
+    </div>
+
+    <div class="explore-list">
+
+      <a href="works.html" class="explore-link reveal">
+
+        <div class="explore-link-main">
+          <span class="explore-number">01 /</span>
+          <span class="explore-name">My Works</span>
+        </div>
+
+        <span class="explore-arrow">↗</span>
+
+      </a>
+
+      <a href="experience.html" class="explore-link reveal">
+
+        <div class="explore-link-main">
+          <span class="explore-number">02 /</span>
+          <span class="explore-name">My Experience</span>
+        </div>
+
+        <span class="explore-arrow">↗</span>
+
+      </a>
+
+      <a href="about.html" class="explore-link reveal">
+
+        <div class="explore-link-main">
+          <span class="explore-number">03 /</span>
+          <span class="explore-name">About Me</span>
+        </div>
+
+        <span class="explore-arrow">↗</span>
+
+      </a>
+
+      <a href="contact.html" class="explore-link reveal">
+
+        <div class="explore-link-main">
+          <span class="explore-number">04 /</span>
+          <span class="explore-name">Let's Connect</span>
+        </div>
+
+        <span class="explore-arrow">↗</span>
+
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+
+<section class="contact-section">
+  <div class="container reveal">
+
+    <p class="eyebrow">
+      HAVE SOMETHING IN MIND?
+    </p>
+
+    <h2>
+      Let's create<br>
+      something <span class="italic">great.</span>
+    </h2>
+
+    <p>
+      Whether you need engaging video content,
+      professional graphics, a modern website,
+      or ongoing social media support,
+      I'd love to hear about your ideas.
+    </p>
+
+    <a href="contact.html" class="button button-primary">
+      Get In Touch ↗
+    </a>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="container footer-inner">
+
+    <span>
+      © <span id="year"></span> John Chris Broqueza
+    </span>
+
+    <span>
+      Designed with purpose. Built with creativity.
+    </span>
+
+  </div>
+</footer>
+
+<script>
+  /* MOBILE NAVIGATION */
+
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  menuToggle.addEventListener("click", () => {
+    const open = navLinks.classList.toggle("open");
+
+    menuToggle.textContent = open ? "✕" : "☰";
+    menuToggle.setAttribute("aria-expanded", String(open));
+
+    menuToggle.setAttribute(
+      "aria-label",
+      open ? "Close navigation menu" : "Open navigation menu"
+    );
+  });
+
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menuToggle.textContent = "☰";
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  /* SCROLL REVEAL */
+
+  const revealElements = document.querySelectorAll(".reveal");
+
+  if (
+    "IntersectionObserver" in window &&
+    !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  ) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    revealElements.forEach(element => {
+      observer.observe(element);
+    });
+  } else {
+    revealElements.forEach(element => {
+      element.classList.add("visible");
+    });
+  }
+
+  /* CURRENT YEAR */
+
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>

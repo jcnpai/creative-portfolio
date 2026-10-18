@@ -1,0 +1,1852 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<title>My Works | John Chris Broqueza</title>
+
+<meta name="description" content="Explore the creative portfolio of John Chris Broqueza, featuring video editing, graphic design, website design, and social media management.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #101010;
+  --surface: #191919;
+  --white: #f5f3ee;
+  --muted: #999999;
+  --accent: #b5a48a;
+  --border: rgba(255,255,255,0.12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 6%;
+}
+
+.italic {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+/* NAVIGATION */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(16,16,16,0.94);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+  height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-size: 13px;
+  color: var(--muted);
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--white);
+}
+
+.nav-links a.active {
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 10px;
+}
+
+.nav-cta {
+  padding: 13px 20px;
+  border: 1px solid var(--border);
+  font-size: 12px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.nav-cta:hover {
+  background: var(--white);
+  color: var(--bg);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 28px;
+}
+
+/* HERO */
+
+.page-hero {
+  padding: 185px 0 95px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::after {
+  content: "WORK";
+  position: absolute;
+  right: -3%;
+  bottom: -18%;
+  font-size: clamp(150px,28vw,430px);
+  font-weight: 700;
+  letter-spacing: -0.09em;
+  color: rgba(255,255,255,0.018);
+  pointer-events: none;
+}
+
+.page-hero h1 {
+  font-size: clamp(75px,13vw,180px);
+  font-weight: 600;
+  letter-spacing: -0.085em;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-bottom p {
+  max-width: 620px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.hero-label {
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+/* PORTFOLIO SECTIONS */
+
+.portfolio-section {
+  padding: 110px 0;
+  border-bottom: 1px solid var(--border);
+  scroll-margin-top: 86px;
+}
+
+.portfolio-section.alt {
+  background: var(--surface);
+}
+
+.category-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 48px;
+}
+
+.category-heading h2 {
+  font-size: clamp(38px,5vw,70px);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 1.12;
+}
+
+.category-description {
+  max-width: 400px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.category-count {
+  display: block;
+  margin-top: 12px;
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+/* PROJECT GRID */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 22px;
+}
+
+.project-item {
+  min-width: 0;
+}
+
+.project-cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg,#34302b,#1a1a1a);
+  color: var(--white);
+  isolation: isolate;
+}
+
+.project-cover img,
+.project-cover video,
+.project-cover iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-cover img {
+  transition: transform 0.6s ease;
+}
+
+.project-cover:hover img {
+  transform: scale(1.05);
+}
+
+.project-cover video,
+.project-cover iframe {
+  pointer-events: none;
+}
+
+.project-cover iframe {
+  border: 0;
+}
+
+.project-cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    transparent 60%,
+    rgba(0,0,0,0.48)
+  );
+  pointer-events: none;
+}
+
+.project-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.project-action {
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  z-index: 4;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--white);
+  color: #111;
+  display: grid;
+  place-items: center;
+  font-size: 19px;
+  transition: 0.3s;
+}
+
+.project-cover:hover .project-action {
+  background: var(--accent);
+  transform: scale(1.08);
+}
+
+/* VIDEO PREVIEW INDICATOR */
+
+.preview-indicator {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(8px);
+  padding: 8px 11px;
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 1px;
+  pointer-events: none;
+}
+
+.preview-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* SHORT FORM PORTRAIT VIDEOS */
+
+.video-grid .project-cover {
+  aspect-ratio: 9 / 12;
+}
+
+/* SHORT FORM LANDSCAPE VIDEOS */
+
+.landscape-video-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 22px;
+  margin-top: 22px;
+}
+
+.landscape-video-grid .project-cover {
+  aspect-ratio: 16 / 9;
+}
+
+/* LONG FORM VIDEOS */
+
+.long-video-grid .project-cover {
+  aspect-ratio: 16 / 10;
+}
+
+/* PERSONAL VIDEOS */
+
+.personal-video-grid .project-cover {
+  aspect-ratio: 9 / 12;
+}
+
+.personal-video-grid .project-cover.landscape-cover {
+  aspect-ratio: 16 / 9;
+}
+
+/* GRAPHIC DESIGNS — SQUARE 1:1 */
+
+#grid-design .project-cover {
+  aspect-ratio: 1 / 1;
+}
+
+#grid-design .project-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SOCIAL MEDIA MANAGEMENT — SQUARE 1:1 */
+
+#grid-social .project-cover {
+  aspect-ratio: 1 / 1;
+}
+
+#grid-social .project-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* MORE WORK */
+
+.more-work-section {
+  padding: 125px 0;
+  background: #141414;
+  border-bottom: 1px solid var(--border);
+}
+
+.more-work-content {
+  text-align: center;
+}
+
+.more-work-content h2 {
+  font-size: clamp(45px,7vw,90px);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.more-work-description {
+  max-width: 620px;
+  margin: 0 auto 40px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* TWO PORTFOLIO BUTTONS */
+
+.portfolio-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.portfolio-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 245px;
+  padding: 20px 28px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+.portfolio-button:hover {
+  transform: translateY(-4px);
+}
+
+.portfolio-button.primary {
+  background: var(--white);
+  color: #101010;
+}
+
+.portfolio-button.primary:hover {
+  background: var(--accent);
+}
+
+.portfolio-button.secondary {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid var(--accent);
+}
+
+.portfolio-button.secondary:hover {
+  background: var(--accent);
+  color: #101010;
+}
+
+.drive-note {
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+/* MEDIA MODAL */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.93);
+  backdrop-filter: blur(15px);
+}
+
+.modal[hidden] {
+  display: none;
+}
+
+.modal-panel {
+  position: relative;
+  width: min(100%,1050px);
+  max-height: 92vh;
+  overflow-y: auto;
+  background: #171717;
+  border: 1px solid var(--border);
+  padding: 60px 20px 25px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  z-index: 5;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--white);
+  color: #111;
+  font-size: 26px;
+}
+
+.modal-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+}
+
+.modal-media img {
+  display: block;
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+}
+
+.modal-media video {
+  display: block;
+  width: 100%;
+  max-height: 75vh;
+  background: #000;
+}
+
+.modal-media iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: #000;
+}
+
+.modal-caption {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.youtube-link {
+  display: block;
+  margin-top: 14px;
+  color: var(--accent);
+  font-size: 12px;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.media-placeholder {
+  padding: 65px 20px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* CONTACT */
+
+.contact-section {
+  padding: 125px 0;
+  background: var(--surface);
+}
+
+.contact-title {
+  display: inline-block;
+  font-size: clamp(50px,8vw,110px);
+  font-weight: 500;
+  letter-spacing: -0.065em;
+  line-height: 1.1;
+  transition: color 0.3s;
+}
+
+.contact-title:hover {
+  color: var(--accent);
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 30px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* SCROLL REVEAL */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .project-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 86px;
+    left: 0;
+    width: 100%;
+    padding: 35px 6%;
+    background: #151515;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 700px) {
+  .page-hero {
+    padding: 155px 0 75px;
+  }
+
+  .hero-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-bottom p {
+    font-size: 15px;
+  }
+
+  .portfolio-section {
+    padding: 75px 0;
+  }
+
+  .category-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 12px;
+  }
+
+  .landscape-video-grid {
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .project-action {
+    width: 35px;
+    height: 35px;
+    right: 10px;
+    bottom: 10px;
+    font-size: 16px;
+  }
+
+  .preview-indicator {
+    top: 9px;
+    left: 9px;
+    padding: 6px 8px;
+    font-size: 9px;
+  }
+
+  .more-work-section,
+  .contact-section {
+    padding: 90px 0;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 520px) {
+  .landscape-video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 350px;
+    margin: auto;
+  }
+
+  .portfolio-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-grid,
+  .personal-video-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+  <nav class="navbar container" aria-label="Main navigation">
+    <a href="index.html" class="logo">JCNPAI<span>.</span></a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="works.html" class="active" aria-current="page">My Works</a>
+      <a href="experience.html">Experience</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <a href="contact.html" class="nav-cta">
+      LET'S TALK ↗
+    </a>
+
+    <button
+      type="button"
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="navLinks"
+    >☰</button>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow reveal">
+      A COLLECTION OF CREATIVE WORK
+    </p>
+
+    <h1 class="reveal">
+      My <span class="italic">Works.</span>
+    </h1>
+
+    <div class="hero-bottom reveal">
+      <p>
+        Explore a curated selection of my creative projects,
+        from engaging video content and graphic design to
+        website experiences and social media campaigns.
+      </p>
+
+      <a href="#short-form" class="hero-label">
+        EXPLORE MY WORK ↓
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 01 SHORT FORM VIDEOS -->
+
+<section class="portfolio-section" id="short-form">
+  <div class="container">
+    <div class="category-heading reveal">
+      <div>
+        <p class="eyebrow">01 / VIDEO PRODUCTION</p>
+        <h2>
+          Short Form <span class="italic">Videos / Reels.</span>
+        </h2>
+      </div>
+
+      <div>
+        <p class="category-description">
+          Engaging short-form content created for Instagram
+          Reels, TikTok, YouTube Shorts, and digital advertising.
+        </p>
+        <span class="category-count" id="count-short"></span>
+      </div>
+    </div>
+
+    <div class="project-grid video-grid" id="grid-short"></div>
+    <div class="landscape-video-grid" id="grid-short-landscape"></div>
+  </div>
+</section>
+
+<!-- 02 LONG FORM VIDEOS -->
+
+<section class="portfolio-section alt" id="long-form">
+  <div class="container">
+    <div class="category-heading reveal">
+      <div>
+        <p class="eyebrow">02 / VIDEO PRODUCTION</p>
+        <h2>
+          Long Form <span class="italic">Videos.</span>
+        </h2>
+      </div>
+
+      <div>
+        <p class="category-description">
+          Long-form storytelling, tutorials, interviews,
+          and professional video production.
+        </p>
+        <span class="category-count" id="count-long"></span>
+      </div>
+    </div>
+
+    <div class="project-grid long-video-grid" id="grid-long"></div>
+  </div>
+</section>
+
+<!-- 03 PERSONAL VIDEO PROJECTS -->
+
+<section class="portfolio-section" id="personal-videos">
+  <div class="container">
+    <div class="category-heading reveal">
+      <div>
+        <p class="eyebrow">03 / PERSONAL CREATIVE WORK</p>
+        <h2>
+          Personal Video <span class="italic">Projects.</span>
+        </h2>
+      </div>
+
+      <div>
+        <p class="category-description">
+          Videos I've created and edited for my personal
+          accounts, where I explore creativity, experiment
+          with different editing styles, and share content
+          inspired by my interests.
+        </p>
+        <span class="category-count" id="count-personal"></span>
+      </div>
+    </div>
+
+    <div class="project-grid personal-video-grid" id="grid-personal"></div>
+  </div>
+</section>
+
+<!-- 04 GRAPHIC DESIGNS -->
+
+<section class="portfolio-section alt" id="graphic-designs">
+  <div class="container">
+    <div class="category-heading reveal">
+      <div>
+        <p class="eyebrow">04 / VISUAL DESIGN</p>
+        <h2>
+          Graphic <span class="italic">Designs.</span>
+        </h2>
+      </div>
+
+      <div>
+        <p class="category-description">
+          Branding, promotional artwork, advertising
+          materials, and digital graphics.
+        </p>
+        <span class="category-count" id="count-design"></span>
+      </div>
+    </div>
+
+    <div class="project-grid" id="grid-design"></div>
+  </div>
+</section>
+
+<!-- 05 WEBSITE DESIGN -->
+
+<section class="portfolio-section" id="website-design">
+  <div class="container">
+    <div class="category-heading reveal">
+      <div>
+        <p class="eyebrow">05 / DIGITAL EXPERIENCES</p>
+        <h2>
+          Website <span class="italic">Design.</span>
+        </h2>
+      </div>
+
+      <div>
+        <p class="category-description">
+          Responsive websites, interactive interfaces,
+          and creative digital experiences.
+        </p>
+        <span class="category-count" id="count-web"></span>
+      </div>
+    </div>
+
+    <div class="project-grid" id="grid-web"></div>
+  </div>
+</section>
+
+<!-- 06 SOCIAL MEDIA MANAGEMENT -->
+
+<section class="portfolio-section alt" id="social-media">
+  <div class="container">
+    <div class="category-heading reveal">
+      <div>
+        <p class="eyebrow">06 / DIGITAL MARKETING</p>
+        <h2>
+          Social Media <span class="italic">Management.</span>
+        </h2>
+      </div>
+
+      <div>
+        <p class="category-description">
+          Content strategies, brand campaigns,
+          and social media creative work.
+        </p>
+        <span class="category-count" id="count-social"></span>
+      </div>
+    </div>
+
+    <div class="project-grid" id="grid-social"></div>
+  </div>
+</section>
+
+<!-- WANT TO SEE MORE - TWO BUTTONS -->
+
+<section class="more-work-section">
+  <div class="container more-work-content reveal">
+    <p class="eyebrow">THERE'S MORE TO EXPLORE</p>
+
+    <h2>
+      Want to see <span class="italic">more?</span>
+    </h2>
+
+    <p class="more-work-description">
+      There's more behind the work you've seen here.
+      Explore my extended collection of creative projects
+      or take a look at my previous portfolio for
+      additional designs, videos, and campaigns.
+    </p>
+
+    <div class="portfolio-buttons">
+
+      <a
+        href="https://drive.google.com/drive/folders/1Q5pIZ8iX0K07bzXfV1ZvYE78ZRh7fNf3?usp=drive_link"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="portfolio-button primary"
+      >
+        Explore Google Drive ↗
+      </a>
+
+      <a
+        href="https://thesocialmediamanager.my.canva.site/john-chris-broqueza"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="portfolio-button secondary"
+      >
+        View Previous Portfolio ↗
+      </a>
+
+    </div>
+
+    <p class="drive-note">
+      Both portfolios open in a new tab.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact-section">
+  <div class="container reveal">
+    <p class="eyebrow">LIKE WHAT YOU SEE?</p>
+
+    <a href="contact.html" class="contact-title">
+      Let's create<br>something great. ↗
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="container footer-inner">
+    <span>
+      © <span id="year"></span> John Chris Broqueza
+    </span>
+    <span>
+      Designed with purpose. Built with creativity.
+    </span>
+  </div>
+</footer>
+
+<!-- MEDIA MODAL -->
+
+<div class="modal" id="mediaModal" hidden>
+  <div
+    class="modal-panel"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Project preview"
+    tabindex="-1"
+  >
+    <button
+      type="button"
+      class="modal-close"
+      id="modalClose"
+      aria-label="Close preview"
+    >×</button>
+
+    <div class="modal-media" id="modalMedia"></div>
+    <p class="modal-caption" id="modalCaption"></p>
+    <div id="modalExtra"></div>
+  </div>
+</div>
+
+<script>
+
+/* =========================================
+   PORTFOLIO CONTENT
+========================================= */
+
+const portfolio = {
+
+  // 8 SHORT FORM VIDEOS
+  short: [
+    {
+      type: "video",
+      orientation: "portrait",
+      src: "videos/short-form/reel-01.mp4",
+      poster: "images/short-form/reel-01.jpg"
+    },
+    {
+      type: "video",
+      orientation: "portrait",
+      src: "videos/short-form/reel-02.mp4",
+      poster: "images/short-form/reel-02.jpg"
+    },
+    {
+      type: "video",
+      orientation: "portrait",
+      src: "videos/short-form/reel-03.mp4",
+      poster: "images/short-form/reel-03.jpg"
+    },
+    {
+      type: "video",
+      orientation: "portrait",
+      src: "videos/short-form/reel-04.mp4",
+      poster: "images/short-form/reel-04.jpg"
+    },
+    {
+      type: "video",
+      orientation: "portrait",
+      src: "videos/short-form/reel-05.mp4",
+      poster: "images/short-form/reel-05.jpg"
+    },
+    {
+      type: "video",
+      orientation: "portrait",
+      src: "videos/short-form/reel-06.mp4",
+      poster: "images/short-form/reel-06.jpg"
+    },
+    {
+      type: "video",
+      orientation: "landscape",
+      src: "videos/short-form/reel-07.mp4",
+      poster: "images/short-form/reel-07.jpg"
+    },
+    {
+      type: "video",
+      orientation: "landscape",
+      src: "videos/short-form/reel-08.mp4",
+      poster: "images/short-form/reel-08.jpg"
+    }
+  ],
+
+  // 3 LONG FORM YOUTUBE VIDEOS
+  long: [
+    {
+      type: "youtube",
+      src: "https://youtu.be/QMrmKXVZyTI"
+    },
+    {
+      type: "youtube",
+      src: "https://youtu.be/4AukD2z0njc"
+    },
+    {
+      type: "youtube",
+      src: "https://youtu.be/MzcRiNYzPFM"
+    }
+  ],
+
+  // 3 PERSONAL VIDEOS
+  personal: [
+    {
+      type: "video",
+      orientation: "portrait",
+      src: "videos/personal/personal-01.mp4",
+      poster: "images/personal/personal-01.jpg"
+    },
+    {
+      type: "video",
+      orientation: "portrait",
+      src: "videos/personal/personal-02.mp4",
+      poster: "images/personal/personal-02.jpg"
+    },
+    {
+      type: "video",
+      orientation: "portrait",
+      src: "videos/personal/personal-03.mp4",
+      poster: "images/personal/personal-03.jpg"
+    }
+  ],
+
+  // 6 GRAPHIC DESIGNS - PNG FILES
+  design: [
+    {
+      type: "image",
+      src: "images/graphic-design/design-01.png"
+    },
+    {
+      type: "image",
+      src: "images/graphic-design/design-02.png"
+    },
+    {
+      type: "image",
+      src: "images/graphic-design/design-03.png"
+    },
+    {
+      type: "image",
+      src: "images/graphic-design/design-04.png"
+    },
+    {
+      type: "image",
+      src: "images/graphic-design/design-05.png"
+    },
+    {
+      type: "image",
+      src: "images/graphic-design/design-06.png"
+    }
+  ],
+
+  // 3 WEBSITE DESIGNS - PNG FILES
+  web: [
+    {
+      type: "image",
+      src: "images/websites/website-01.png"
+    },
+    {
+      type: "image",
+      src: "images/websites/website-02.png"
+    },
+    {
+      type: "image",
+      src: "images/websites/website-03.png"
+    }
+  ],
+
+  // 3 SOCIAL MEDIA PROJECTS - PNG FILES
+  social: [
+    {
+      type: "image",
+      src: "images/social-media/social-01.png"
+    },
+    {
+      type: "image",
+      src: "images/social-media/social-02.png"
+    },
+    {
+      type: "image",
+      src: "images/social-media/social-03.png"
+    }
+  ]
+};
+
+/* =========================================
+   YOUTUBE ID PARSER
+========================================= */
+
+function getYouTubeId(url) {
+  try {
+    const parsed = new URL(url);
+    const host = parsed.hostname.toLowerCase();
+    let id = null;
+
+    if (
+      host === "youtu.be" ||
+      host === "www.youtu.be"
+    ) {
+      id = parsed.pathname.split("/").filter(Boolean)[0];
+    } else if (
+      [
+        "youtube.com",
+        "www.youtube.com",
+        "m.youtube.com",
+        "youtube-nocookie.com",
+        "www.youtube-nocookie.com"
+      ].includes(host)
+    ) {
+      if (parsed.pathname === "/watch") {
+        id = parsed.searchParams.get("v");
+      } else {
+        const parts = parsed.pathname.split("/").filter(Boolean);
+        if (["embed","shorts","live"].includes(parts[0])) {
+          id = parts[1];
+        }
+      }
+    }
+
+    return /^[A-Za-z0-9_-]{11}$/.test(id || "")
+      ? id
+      : null;
+  } catch {
+    return null;
+  }
+}
+
+/* =========================================
+   GALLERY RENDERING
+========================================= */
+
+const categories = [
+  "short",
+  "long",
+  "personal",
+  "design",
+  "web",
+  "social"
+];
+
+const categoryLabels = {
+  short: "Short Form Videos / Reels",
+  long: "Long Form Videos",
+  personal: "Personal Video Projects",
+  design: "Graphic Designs",
+  web: "Website Design",
+  social: "Social Media Management"
+};
+
+const videoPreviews = [];
+const youtubePreviews = [];
+
+function renderCategory(category) {
+  const grid = document.getElementById("grid-" + category);
+  const count = document.getElementById("count-" + category);
+  const items = portfolio[category] || [];
+
+  grid.replaceChildren();
+
+  if (category === "short") {
+    document.getElementById("grid-short-landscape")
+      .replaceChildren();
+  }
+
+  items.forEach((item,index) => {
+    const article = document.createElement("article");
+    article.className = "project-item";
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "project-cover";
+
+    if (
+      category === "personal" &&
+      item.orientation === "landscape"
+    ) {
+      button.classList.add("landscape-cover");
+    }
+
+    button.setAttribute(
+      "aria-label",
+      "Open " + categoryLabels[category] +
+      " project " + (index + 1)
+    );
+
+    const fallback = document.createElement("span");
+    fallback.className = "project-fallback";
+    fallback.textContent =
+      item.type === "image" ? "IMAGE PREVIEW" : "VIDEO PREVIEW";
+
+    button.appendChild(fallback);
+
+    if (item.type === "video") {
+      const video = document.createElement("video");
+
+      video.src = item.src;
+      video.muted = true;
+      video.defaultMuted = true;
+      video.loop = true;
+      video.playsInline = true;
+      video.preload = "none";
+
+      video.setAttribute("muted","");
+      video.setAttribute("playsinline","");
+      video.setAttribute("loop","");
+
+      if (item.poster) {
+        video.poster = item.poster;
+      }
+
+      video.addEventListener("error",() => {
+        video.style.display = "none";
+      });
+
+      button.appendChild(video);
+      videoPreviews.push(video);
+
+    } else if (item.type === "youtube") {
+      const videoId = getYouTubeId(item.src);
+
+      if (videoId) {
+        const thumbnail = document.createElement("img");
+
+        thumbnail.src =
+          "https://img.youtube.com/vi/" +
+          videoId + "/hqdefault.jpg";
+
+        thumbnail.alt = "";
+        thumbnail.loading = "lazy";
+        button.appendChild(thumbnail);
+
+        const holder = document.createElement("span");
+
+        Object.assign(holder.style,{
+          position:"absolute",
+          inset:"0",
+          display:"block",
+          overflow:"hidden",
+          pointerEvents:"none"
+        });
+
+        button.appendChild(holder);
+
+        youtubePreviews.push({
+          button,
+          holder,
+          videoId,
+          active:false
+        });
+      }
+
+    } else {
+      const image = document.createElement("img");
+
+      image.src = item.src;
+      image.alt = "";
+      image.loading = "lazy";
+
+      image.addEventListener("error",() => {
+        image.remove();
+      });
+
+      button.appendChild(image);
+    }
+
+    if (item.type !== "image") {
+      const indicator = document.createElement("span");
+      indicator.className = "preview-indicator";
+
+      const dot = document.createElement("span");
+      dot.className = "preview-dot";
+
+      const label = document.createElement("span");
+      label.textContent = "MUTED PREVIEW";
+
+      indicator.append(dot,label);
+      button.appendChild(indicator);
+    }
+
+    const action = document.createElement("span");
+
+    action.className = "project-action";
+    action.setAttribute("aria-hidden","true");
+    action.textContent = item.type === "image" ? "↗" : "▶";
+
+    button.appendChild(action);
+
+    button.addEventListener("click",() => {
+      openMedia(item,category);
+    });
+
+    article.appendChild(button);
+
+    if (
+      category === "short" &&
+      item.orientation === "landscape"
+    ) {
+      document.getElementById("grid-short-landscape")
+        .appendChild(article);
+    } else {
+      grid.appendChild(article);
+    }
+  });
+
+  count.textContent =
+    items.length +
+    (items.length === 1 ? " PROJECT" : " PROJECTS");
+}
+
+categories.forEach(renderCategory);
+
+/* =========================================
+   AUTOPLAY SYSTEM
+========================================= */
+
+let modalOpen = false;
+
+const visibleMP4 = new Set();
+const visibleYouTube = new Set();
+
+function playMP4(video) {
+  if (
+    modalOpen ||
+    document.hidden ||
+    !visibleMP4.has(video)
+  ) return;
+
+  video.muted = true;
+
+  const promise = video.play();
+
+  if (promise && typeof promise.catch === "function") {
+    promise.catch(() => {});
+  }
+}
+
+function startYouTubePreview(item) {
+  if (
+    item.active ||
+    modalOpen ||
+    document.hidden ||
+    !visibleYouTube.has(item)
+  ) return;
+
+  const iframe = document.createElement("iframe");
+
+  iframe.src =
+    "https://www.youtube.com/embed/" +
+    item.videoId +
+    "?autoplay=1&mute=1&controls=0" +
+    "&playsinline=1&loop=1&playlist=" +
+    item.videoId +
+    "&rel=0";
+
+  iframe.title = "Muted YouTube video preview";
+  iframe.allow = "autoplay; encrypted-media; picture-in-picture";
+  iframe.referrerPolicy = "strict-origin-when-cross-origin";
+  iframe.tabIndex = -1;
+
+  Object.assign(iframe.style,{
+    position:"absolute",
+    inset:"0",
+    width:"100%",
+    height:"100%",
+    border:"0",
+    pointerEvents:"none"
+  });
+
+  item.holder.appendChild(iframe);
+  item.active = true;
+}
+
+function stopYouTubePreview(item) {
+  if (!item.active) return;
+  item.holder.replaceChildren();
+  item.active = false;
+}
+
+const mp4Observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const video = entry.target;
+
+    if (entry.isIntersecting) {
+      visibleMP4.add(video);
+      playMP4(video);
+    } else {
+      visibleMP4.delete(video);
+      video.pause();
+    }
+  });
+},{threshold:0.35});
+
+videoPreviews.forEach(video => {
+  mp4Observer.observe(video);
+});
+
+const youtubeObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const item = youtubePreviews.find(
+      preview => preview.button === entry.target
+    );
+
+    if (!item) return;
+
+    if (entry.isIntersecting) {
+      visibleYouTube.add(item);
+      startYouTubePreview(item);
+    } else {
+      visibleYouTube.delete(item);
+      stopYouTubePreview(item);
+    }
+  });
+},{threshold:0.5});
+
+youtubePreviews.forEach(item => {
+  youtubeObserver.observe(item.button);
+});
+
+function pauseAllPreviews() {
+  videoPreviews.forEach(video => {
+    video.pause();
+  });
+
+  youtubePreviews.forEach(item => {
+    stopYouTubePreview(item);
+  });
+}
+
+function refreshPreviews() {
+  if (modalOpen || document.hidden) return;
+
+  visibleMP4.forEach(playMP4);
+  visibleYouTube.forEach(startYouTubePreview);
+}
+
+document.addEventListener("visibilitychange",() => {
+  if (document.hidden) {
+    pauseAllPreviews();
+  } else {
+    refreshPreviews();
+  }
+});
+
+/* =========================================
+   MEDIA MODAL
+========================================= */
+
+const modal = document.getElementById("mediaModal");
+const modalPanel = modal.querySelector(".modal-panel");
+const modalMedia = document.getElementById("modalMedia");
+const modalCaption = document.getElementById("modalCaption");
+const modalExtra = document.getElementById("modalExtra");
+const modalClose = document.getElementById("modalClose");
+
+let previousFocus = null;
+
+function showFallback(message) {
+  modalMedia.replaceChildren();
+
+  const fallback = document.createElement("div");
+  fallback.className = "media-placeholder";
+  fallback.textContent = message;
+
+  modalMedia.appendChild(fallback);
+}
+
+function openMedia(item,category) {
+  previousFocus = document.activeElement;
+  modalOpen = true;
+
+  pauseAllPreviews();
+
+  modalMedia.replaceChildren();
+  modalExtra.replaceChildren();
+
+  if (item.type === "video") {
+    const video = document.createElement("video");
+
+    video.src = item.src;
+    video.controls = true;
+    video.playsInline = true;
+    video.autoplay = true;
+    video.muted = false;
+    video.volume = 1;
+
+    if (item.poster) {
+      video.poster = item.poster;
+    }
+
+    video.addEventListener("error",() => {
+      showFallback("Video unavailable. Check the MP4 file path.");
+    });
+
+    modalMedia.appendChild(video);
+    video.play().catch(() => {});
+
+  } else if (item.type === "youtube") {
+    const videoId = getYouTubeId(item.src);
+
+    if (!videoId) {
+      showFallback("Please add a valid YouTube link.");
+    } else {
+      const iframe = document.createElement("iframe");
+
+      iframe.src =
+        "https://www.youtube.com/embed/" +
+        videoId +
+        "?autoplay=1&playsinline=1&rel=0";
+
+      iframe.title = "YouTube portfolio video";
+      iframe.allow =
+        "autoplay; encrypted-media; picture-in-picture; web-share";
+      iframe.allowFullscreen = true;
+      iframe.referrerPolicy = "strict-origin-when-cross-origin";
+
+      modalMedia.appendChild(iframe);
+
+      const link = document.createElement("a");
+
+      link.href =
+        "https://www.youtube.com/watch?v=" + videoId;
+
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.className = "youtube-link";
+      link.textContent =
+        "Having trouble playing? Watch on YouTube ↗";
+
+      modalExtra.appendChild(link);
+    }
+
+  } else {
+    const image = document.createElement("img");
+
+    image.src = item.src;
+    image.alt = categoryLabels[category] + " project";
+
+    image.addEventListener("error",() => {
+      showFallback("Image unavailable. Check the image path.");
+    });
+
+    modalMedia.appendChild(image);
+  }
+
+  modalCaption.textContent = categoryLabels[category];
+  modal.hidden = false;
+
+  document.body.classList.add("modal-open");
+  modalPanel.scrollTop = 0;
+  modalClose.focus();
+}
+
+function closeMedia() {
+  const video = modalMedia.querySelector("video");
+
+  if (video) {
+    video.pause();
+  }
+
+  modalMedia.replaceChildren();
+  modalExtra.replaceChildren();
+
+  modal.hidden = true;
+  modalOpen = false;
+
+  document.body.classList.remove("modal-open");
+
+  if (previousFocus && previousFocus.isConnected) {
+    previousFocus.focus();
+  }
+
+  refreshPreviews();
+}
+
+modalClose.addEventListener("click",closeMedia);
+
+modal.addEventListener("click",event => {
+  if (event.target === modal) {
+    closeMedia();
+  }
+});
+
+document.addEventListener("keydown",event => {
+  if (modal.hidden) return;
+
+  if (event.key === "Escape") {
+    closeMedia();
+    return;
+  }
+
+  if (event.key === "Tab") {
+    const focusable = Array.from(
+      modalPanel.querySelectorAll(
+        'button:not([disabled]),a[href],video[controls],iframe'
+      )
+    ).filter(element => !element.hidden);
+
+    if (!focusable.length) return;
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (
+      !event.shiftKey &&
+      document.activeElement === last
+    ) {
+      event.preventDefault();
+      first.focus();
+    }
+  }
+});
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click",() => {
+  const open = navLinks.classList.toggle("open");
+
+  menuToggle.textContent = open ? "✕" : "☰";
+
+  menuToggle.setAttribute("aria-expanded",String(open));
+  menuToggle.setAttribute(
+    "aria-label",
+    open ? "Close navigation menu" : "Open navigation menu"
+  );
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click",() => {
+    navLinks.classList.remove("open");
+    menuToggle.textContent = "☰";
+    menuToggle.setAttribute("aria-expanded","false");
+  });
+});
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+const revealElements = document.querySelectorAll(".reveal");
+
+if (
+  "IntersectionObserver" in window &&
+  !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },{threshold:0.08});
+
+  revealElements.forEach(element => {
+    observer.observe(element);
+  });
+
+} else {
+  revealElements.forEach(element => {
+    element.classList.add("visible");
+  });
+}
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+</script>
+</body>
+</html>
